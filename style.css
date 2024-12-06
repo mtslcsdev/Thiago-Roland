@@ -1,0 +1,256 @@
+ /* Resetando margin, padding e setando box-sizing */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, sans-serif;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ /* Estilo do body */
+ body {
+     background-color: #0f1319;
+     color: #fff;
+     display: flex;
+     justify-content: center;
+     /* Centraliza horizontalmente */
+     align-items: center;
+     /* Centraliza verticalmente */
+     min-height: 100vh;
+     /* Garante que ocupe 100% da altura da tela */
+     flex-direction: column;
+     margin: 0;
+ }
+
+ .card {
+     text-align: center;
+     padding: 20px;
+     backdrop-filter: blur(10px);
+     border-radius: 15px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+     width: 90%;
+     /* Ajuste a largura do card conforme necessário */
+     max-width: 600px;
+     /* Limita a largura máxima */
+     margin: 0 auto;
+     /* Garante que o card esteja no centro, horizontalmente */
+ }
+
+ /* Imagem do perfil */
+ .profile-img {
+     width: 170px;
+     height: 170px;
+     border-radius: 50%;
+     box-shadow: 0 0 10px rgba(255, 255, 255, 0.622);
+     margin-bottom: 15px;
+ }
+
+ /* Título do perfil */
+ .title {
+     font-family: "Montserrat", sans-serif;
+     font-size: 2em;
+     font-weight: 200;
+     margin-bottom: 10px;
+ }
+
+ /* Descrição do perfil */
+ .description {
+     font-family: "Noto Sans Serif", sans-serif;
+     font-size: 1.2em;
+     color: #b0bec5;
+     margin-bottom: 20px;
+ }
+
+ /* Botões */
+ .button-container {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .btn {
+     padding: 15px 20px;
+     border: none;
+     border-radius: 5px;
+     color: #fff;
+     font-size: 1em;
+     font-weight: bold;
+     text-align: center;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     transition: all 0.3s ease;
+     cursor: pointer;
+ }
+
+ .btn:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+ }
+
+ /* Botões para cada link */
+ .btn-strava {
+     background-color: #1da1f2;
+ }
+
+ .btn-whatsapp {
+     background-color: #1da1f2;
+ }
+
+ .btn-instagram {
+     background-color: #1da1f2;
+ }
+
+ .btn-section {
+     background-color: #1da1f2;
+ }
+
+ .btn i {
+     font-size: 1.2em;
+ }
+
+ /* Seções de conteúdo */
+ .section-header {
+     font-family: "Montserrat", sans-serif;
+     font-size: 1.5em;
+     margin: 20px 0 10px 0;
+     color: #1da1f2;
+ }
+
+ .section {
+     text-align: left;
+     margin: 10px 0;
+     padding: 10px;
+     background: rgba(0, 0, 0, 0.5);
+     border-radius: 10px;
+ }
+
+
+
+ /* Cards de planos */
+ .plan-container {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     /* Alinha os cards no topo */
+     gap: 20px;
+     flex-wrap: wrap;
+     margin-top: 120px;
+     /* Dá um espaço entre o card de apresentação e a seção de planos */
+     text-align: center;
+     /* Centraliza todo o texto na seção de planos */
+ }
+
+ .plan-card {
+     flex: 1 1 30%;
+     background-color: #1c1c1c;
+     border-radius: 8px;
+     padding: 20px;
+     margin: 1em 0;
+     border: 2px solid #fff;
+     transition: transform 0.3s;
+     max-width: 350px;
+ }
+
+ .plan-card h2 {
+     font-size: 1.5em;
+     color: #ffffff;
+     margin-bottom: 10px;
+ }
+
+ /* Estilo do preço */
+ .plan-card .price {
+     font-size: 2.5em;
+     font-weight: bold;
+     color: #00bfff;
+     /* Cor azul para o preço */
+     margin-bottom: 1em;
+ }
+
+ /* Estilo dos itens da lista não ordenada */
+ .plan-card ul {
+     list-style: none;
+     margin: 1em 0;
+     padding: 0;
+     text-align: left;
+     /* Alinha o texto da lista à esquerda */
+ }
+
+ .plan-card li {
+     padding: 0.5em 0;
+     border-bottom: 1px solid #333;
+ }
+
+ .plan-card:hover {
+     transform: scale(1.05);
+ }
+
+ /* Estilo do botão "Eu Quero" */
+ .cta-button-container {
+     display: flex;
+     justify-content: center;
+     margin-top: 1em;
+ }
+
+ .cta-button {
+     padding: 10px 20px;
+     color: #fff;
+     background-color: #00bfff;
+     /* Cor azul para o botão */
+     border-radius: 5px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background-color 0.3s;
+ }
+
+ .cta-button:hover {
+     background-color: #0077b6;
+ }
+
+ /* Estilo para o card popular */
+ .plan-card.popular {
+     border-color: #ffffff;
+ }
+
+ /* Responsividade */
+ @media (max-width: 768px) {
+     .plan-container {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .plan-card {
+         flex-basis: 100%;
+         max-width: 100%;
+         /* Garantir que o card ocupe toda a largura da tela em dispositivos pequenos */
+         margin-bottom: 20px;
+         /* Espaço entre os cards */
+     }
+
+     /* Garantir que todos os cards fiquem com o mesmo tamanho */
+     .plan-card {
+         flex: 1 1 100%;
+         max-width: 100%;
+     }
+
+     .card {
+         padding: 15px;
+     }
+
+     .title {
+         font-size: 1.5em;
+     }
+
+     .description {
+         font-size: 1em;
+     }
+
+     .btn {
+         font-size: 0.9em;
+     }
+ }
