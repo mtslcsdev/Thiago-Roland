@@ -37,7 +37,7 @@
      /* Limita a largura máxima */
      margin: 0 auto;
      /* Garante que o card esteja no centro, horizontalmente */
-     margin-bottom: 80px;
+     margin-bottom: 250px;
  }
 
  /* Imagem do perfil */
@@ -132,94 +132,14 @@
  }
 
 
-
- /* Cards de planos */
- .plan-container {
-     display: flex;
-     justify-content: center;
-     align-items: flex-start;
-     /* Alinha os cards no topo */
-     gap: 20px;
-     flex-wrap: wrap;
-     margin-top: 50px;
-     margin-bottom: 100px;
-     /* Dá um espaço entre o card de apresentação e a seção de planos */
-     text-align: center;
-     /* Centraliza todo o texto na seção de planos */
- }
-
- .plan-card {
-     flex: 1 1 30%;
-     background-color: #1c1c1c;
-     border-radius: 8px;
-     padding: 20px;
-     margin: 1em 0;
-     border: 2px solid #fff;
-     transition: transform 0.3s;
-     max-width: 350px;
- }
-
- .plan-card h2 {
-     font-size: 1.5em;
-     color: #ffffff;
- }
-
- /* Estilo do preço */
- .plan-card .price {
-     font-size: 2.5em;
-     font-weight: bold;
-     color: #00bfff;
-     /* Cor azul para o preço */
-     margin-bottom: 1em;
- }
-
- /* Estilo dos itens da lista não ordenada */
- .plan-card ul {
-     list-style: none;
-     margin: 1em 0;
-     padding: 0;
-     text-align: left;
-     /* Alinha o texto da lista à esquerda */
- }
-
- .plan-card li {
-     padding: 0.5em 0;
-     border-bottom: 1px solid #333;
- }
-
- .plan-card:hover {
-     transform: scale(1.05);
- }
-
- /* Estilo do botão "Eu Quero" */
- .cta-button-container {
-     display: flex;
-     justify-content: center;
-     margin-top: 1em;
- }
-
- .cta-button {
-     padding: 10px 20px;
-     color: #fff;
-     background-color: #00bfff;
-     /* Cor azul para o botão */
-     border-radius: 5px;
-     text-decoration: none;
-     font-weight: bold;
-     transition: background-color 0.3s;
- }
-
- .cta-button:hover {
-     background-color: #0077b6;
- }
-
- /* Estilo para o card popular */
- .plan-card.popular {
-     border-color: #ffffff;
- }
-
  section#sobre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
     padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .container {
@@ -232,12 +152,11 @@
   }
   
   /* Galeria de Imagens */
-  /* Galeria de Imagens */
 .image-gallery {
+    flex: 1 1 50%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    flex: 1 1 50%;
   }
   
   .image-gallery img {
@@ -247,13 +166,77 @@
     border-radius: 5px;
     object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
   }
   
   .image-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6);
+    transform: scale(1.5);
+    z-index: 1;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6);
   }
-  
+
+  /* Efeito para o mobile com :target */
+.image-gallery img:focus,
+.image-gallery img:target {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 90%;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fundo escuro para o modal */
+.image-gallery img:target::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+/* Botão de fechar no mobile */
+.modal-close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+}
+
+.modal-close::before {
+    content: "×";
+}
+
+.modal-close:hover {
+    background: #f00;
+    color: #fff;
+}
+
+/* Redirecionar para fechar */
+.image-gallery img:target ~ .modal-close {
+    display: block;
+}
+
   /* Texto */
   .about-text {
     flex: 1 1 45%;
@@ -301,30 +284,16 @@
   }
 
   .cta-container {
+    margin-top: 25px;
     display: flex;
     justify-content: center;
   }
 
  /* Responsividade */
  @media (max-width: 768px) {
-     .plan-container {
-         flex-direction: column;
-         align-items: center;
-     }
-
-     .plan-card {
-         flex-basis: 100%;
-         max-width: 100%;
-         /* Garantir que o card ocupe toda a largura da tela em dispositivos pequenos */
-         margin-bottom: 20px;
-         /* Espaço entre os cards */
-     }
-
-     /* Garantir que todos os cards fiquem com o mesmo tamanho */
-     .plan-card {
-         flex: 1 1 100%;
-         max-width: 100%;
-     }
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
      .card {
          padding: 15px;
@@ -343,3 +312,21 @@
      }
    
  }
+
+ @media (max-width: 480px) {
+    .image-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Animação para itens surgindo */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  [data-aos="fade-up"] {
+    opacity: 1;
+    transform: translateY(0);
+  }

@@ -7,12 +7,15 @@
     <!-- Fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Serif:wght@400&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link href="style.css" rel="stylesheet">
-
   </head>
   <body>
     <!-- Card de apresentação -->
-    <div class="card">
+    <div class="card" data-aos="fade-up">
       <img src="./img/thiago1.jpg" alt="Foto do Treinador" class="profile-img" />
       <div class="title">THIAGO ROLAND</div>
       <div class="description">
@@ -22,71 +25,28 @@
         <a href="https://wa.me/558688932261" class="btn btn-whatsapp"><i>📱</i> Marque sua aula experimental</a>
         <a href="https://www.strava.com/athletes/52236756?oq=thiago" class="btn btn-strava"><i>🏃</i> Me acompanhe no Strava</a>
         <a href="https://www.instagram.com/thiagoroland42k/" class="btn btn-instagram"><i>📷</i> Me acompanhe no Instagram</a>
-        <a href="#planos" class="btn btn-section"><i>📋</i> Planos</a>
         <a href="#sobre" class="btn btn-section"><i>ℹ️</i> Sobre Mim</a>
       </div>
     </div>
 
-    <!-- Seção de Planos -->
-    <div class="plan-container" id="planos">
-      <h1>Quer fazer parte do TIME TR em 2025? Nossos planos são:</h1>
-      <div class="plan-container">
-        <div class="plan-card">
-            <h2>Plano Bronze</h2>
-            <p>Seu treinamento individualizado!</p>
-            <p class="price">R$ 150,00/mês</p>
-            <ul>
-                <li>Aula experimental presencial ou online</li>
-                <li>Planilhas de treino semanais totalmente individualizadas</li>
-                <li>Feedback no App SisRun e WhatsApp</li>
-            </ul>
-            <div class="cta-button-container">
-                <a href="https://wa.me/558688932261" class="cta-button">Eu Quero</a>
-            </div>
-        </div>
-    
-        <div class="plan-card">
-            <h2>Plano Família</h2>
-            <p>Valor para cada integrante da Família</p>
-            <p class="price">R$ 140,00/mês</p>
-            <ul>
-                <li>Aula experimental presencial ou online</li>
-                <li>Planilhas de treino semanais totalmente individualizadas</li>
-                <li>Feedback no App SisRun e WhatsApp</li>
-            </ul>
-            <div class="cta-button-container">
-                <a href="https://wa.me/558688932261" class="cta-button">Eu Quero</a>
-            </div>
-        </div>
-    
-        <div class="plan-card">
-            <h2>Plano TR Endurance</h2>
-            <p>21km e 42km</p>
-            <p class="price">R$ 190,00/mês</p>
-            <ul>
-                <li>Aula experimental presencial ou online</li>
-                <li>Planilhas de treino individualizadas de acordo com seu objetivo</li>
-                <li>Feedback no App SisRun e WhatsApp</li>
-            </ul>
-            <div class="cta-button-container">
-                <a href="https://wa.me/558688932261" class="cta-button">Eu Quero</a>
-            </div>
-        </div>
-    </div>
-    
-    <section id="sobre">
+    <section id="sobre" data-aos="fade-up">
       <div class="container">
         <!-- Galeria de Imagens -->
         <div class="image-gallery">
-          <img src="./img/grid1.jpg" alt="Imagem 1">
-          <img src="./img/grid2.jpg" alt="Imagem 2">
-          <img src="./img/thiago2.jpg" alt="Imagem 3">
-          <img src="./img/grid4.jpg" alt="Imagem 4">
-          <img src="./img/grid5.jpg" alt="Imagem 5">
-          <img src="./img/grid6.jpg" alt="Imagem 6">
+          <a href="#img1"><img src="./img/tr1.jpg" alt="Imagem 1"></a>
+          <a href="#img2"><img src="./img/tr2.jpg" alt="Imagem 2"></a>
+          <a href="#img3"><img src="./img/tr3.jpg" alt="Imagem 3"></a>
+          <a href="#img4"><img src="./img/tr4.jpg" alt="Imagem 4"></a>
+          <a href="#img5"><img src="./img/tr5.jpg" alt="Imagem 5"></a>
+          <a href="#img6"><img src="./img/tr6.jpg" alt="Imagem 6"></a>
+          <a href="#img7"><img src="./img/tr7.jpg" alt="Imagem 7"></a>
+          <a href="#img8"><img src="./img/tr8.jpg" alt="Imagem 8"></a>
+          <a href="#img9"><img src="./img/tr9.jpg" alt="Imagem 9"></a>
         </div>
+        <div id="close" class="modal-close"></div>
+
         <!-- Texto -->
-        <div class="about-text">
+        <div class="about-text" data-aos="fade-up">
           <h2>SOBRE MIM</h2>
           <p>
             Olá, atleta! Me chamo Thiago Roland, e sou treinador de corrida com anos de experiência.
@@ -95,10 +55,12 @@
             bom direcionamento!
           </p>
           <div class="cta-container">
-              <a href="https://wa.me/https://wa.me/558688932261" class="cta-button">Venha fazer parte do time!</a>
+              <a href="https://wa.me/558688932261" class="cta-button">Venha fazer parte do time!</a>
             </div>
         </div>
       </div>
     </section>
+
   </body>
 </html>
+
