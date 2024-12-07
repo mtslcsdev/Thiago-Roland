@@ -37,11 +37,12 @@
      /* Limita a largura máxima */
      margin: 0 auto;
      /* Garante que o card esteja no centro, horizontalmente */
+     margin-bottom: 80px;
  }
 
  /* Imagem do perfil */
  .profile-img {
-     width: 170px;
+     width: 195px;
      height: 170px;
      border-radius: 50%;
      box-shadow: 0 0 10px rgba(255, 255, 255, 0.622);
@@ -140,7 +141,8 @@
      /* Alinha os cards no topo */
      gap: 20px;
      flex-wrap: wrap;
-     margin-top: 150px;
+     margin-top: 50px;
+     margin-bottom: 100px;
      /* Dá um espaço entre o card de apresentação e a seção de planos */
      text-align: center;
      /* Centraliza todo o texto na seção de planos */
@@ -160,7 +162,6 @@
  .plan-card h2 {
      font-size: 1.5em;
      color: #ffffff;
-     margin-bottom: 10px;
  }
 
  /* Estilo do preço */
@@ -217,6 +218,93 @@
      border-color: #ffffff;
  }
 
+ section#sobre {
+    padding: 50px 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  
+  /* Galeria de Imagens */
+  /* Galeria de Imagens */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    flex: 1 1 50%;
+  }
+  
+  .image-gallery img {
+    width: 100%;
+    height: 200px; /* Altura fixa para todas as imagens */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Texto */
+  .about-text {
+    flex: 1 1 45%;
+  }
+  
+  .about-text h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00aaff;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin: 20px auto 0;
+    padding: 15px 30px;
+    background-color: #00aaff; /* Azul correspondente ao estilo do projeto */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #0088cc; /* Azul mais escuro no hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .cta-button:active {
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .cta-container {
+    display: flex;
+    justify-content: center;
+  }
+
  /* Responsividade */
  @media (max-width: 768px) {
      .plan-container {
@@ -253,4 +341,5 @@
      .btn {
          font-size: 0.9em;
      }
+   
  }
